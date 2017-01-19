@@ -25,15 +25,16 @@ def copy_anything(path, destination):
     path_is_file = isfile(path)
     print(path)
     print(destination)
+    print(path_is_file)
     if path_is_file:
         copy2(path, destination)
     else:
-        copytree(path, destination)
+        copytree(path, destination + '/')
 
 def create_template(template, directory):
     '''Copy a template from a template folder to the src destination.'''
-    full_template_path = './' + TEMPLATE_DIRECTORY + template
-    destination_path = './' + SOURCE_DIRECTORY + directory
+    full_template_path = TEMPLATE_DIRECTORY + template
+    destination_path = SOURCE_DIRECTORY + directory
     copy_anything(full_template_path, destination_path)
 
 def main():

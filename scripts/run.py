@@ -28,6 +28,13 @@ def install():
     '''Installs all dependencies required for using PyCast.'''
     run('./install.sh')
 
+def setup():
+    '''Initializes the boilerplate setup, intended to rename required place-
+    holders.'''
+    # Add constant to constants.py
+    # Run install script
+    pass
+
 def start():
     '''Standard demo operation for running the script. May have a package-
     specific implementation.'''
@@ -60,6 +67,7 @@ def main():
 
     # Select script
     scripts = {
+        'setup': setup,
         'install': install,
         'start': start,
         'lint': lint,
