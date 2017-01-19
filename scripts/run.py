@@ -41,6 +41,10 @@ def docs():
     '''Regenerate documentation for specified source.'''
     pass
 
+def template():
+    '''Use a template generation script to create code snippets.'''
+    run('python3 template.py')
+
 def main():
     '''Switches to a script to run.'''
     # Configure argument parser
@@ -60,6 +64,7 @@ def main():
         'start': start,
         'lint': lint,
         'docs': docs,
+        'template': template,
         }
 
     # Run selected script
