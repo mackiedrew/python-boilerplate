@@ -5,10 +5,10 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $dir
 
 # Setup Virtual Environment
-sudo wget "https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh"
-bash Miniconda3-latest-Linux-x86_64.sh
-sudo rm Miniconda3-latest-Linux-x86_64.sh
-~/miniconda3/bin/conda update conda
+sudo apt-get install -y python3-venv
+python3 -m venv ../
 
 # Install Dependencies
-~/miniconda3/bin/conda env create -n pycast_env --file "../requirements/environment.yml"
+echo -n "Are you a user or developer? (common/develop): "
+read environment
+sudo pip3 install -r "../requirements/$environment.txt"

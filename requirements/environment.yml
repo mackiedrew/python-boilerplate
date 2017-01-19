@@ -1,7 +1,0 @@
-name: pycast_env
-dependencies:
-- python=3.5.2
-- pylint=1.5.4
-- numpy=1.11.3
-- scipy=0.18.1
-- matplotlib=1.5.3
