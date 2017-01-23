@@ -1,3 +1,2 @@
 -r common.txt
 pylint>=1.6.4
-
